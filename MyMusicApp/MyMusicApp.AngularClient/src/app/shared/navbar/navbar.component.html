@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">MyMusicApp MusicApplication</a>
+    
+    <button class="navbar-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarColor01" 
+            aria-controls="navbarColor01" 
+            aria-expanded="false" 
+            (click)="isCollapsed = !isCollapsed" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div  *ngIf="isUserLogged$"  class="collapse navbar-collapse" id="navbarColor01" [class.collapse]="isCollapsed">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link"[routerLink]="['song']" >Songs</a>
+        </li>
+        
+      </ul>
+      <button class="btn btn-outline-secondary" (click)="logout()">Logout</button>
+    </div>
+  </nav>

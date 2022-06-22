@@ -1,0 +1,19 @@
+<div class="content-outer-container">
+
+  <div class="content-inner-container">
+      
+      <app-navbar></app-navbar>
+      
+      <div class="container p-sm-1" >
+      
+        <app-global-loader *ngIf="isLoading"></app-global-loader>
+
+          <router-outlet></router-outlet>
+          
+      </div>
+
+  </div>
+  
+</div>
+
+<app-footer></app-footer>
